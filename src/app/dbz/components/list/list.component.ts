@@ -15,15 +15,20 @@ export class ListComponent {
   }];
 
   @Output()
-  public onRemove: EventEmitter<number> = new EventEmitter();
+  // public onRemove: EventEmitter<number> = new EventEmitter();
+  public onRemove: EventEmitter<string> = new EventEmitter();
 
-  public onRemoveCharacter(index: number): void {
+  // public onRemoveCharacter(index: number): void {
+  public onRemoveCharacter(id?: string): void {
 
-    // EMitir el ID del caracter.
-    this.onRemove.emit(index);
+    if (!id) return;
 
-    console.log({index});
+  // Emitir el ID del caracter.
+     this.onRemove.emit(id);
 
+  // Emitir el índice del elemento.
+  //   this.onRemove.emit(index);
+  //   console.log({index});
   }
 
 }

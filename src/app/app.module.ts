@@ -17,7 +17,7 @@ import { DbzModule } from './dbz/dbz.module';
     HeroesModule,
     DbzModule
   ],
-  providers: [],
+  providers: [], // El servicio DbzService se autoincluye en providers mediante el {providedIn: 'root'} de su declaración.
   bootstrap: [AppComponent]
 })
 export class AppModule { }
