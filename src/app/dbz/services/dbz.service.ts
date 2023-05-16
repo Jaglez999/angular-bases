@@ -34,7 +34,7 @@ export class DbzService {
       console.log(newCharacter);
     }
 
-    public removeCharacterPage (index: number): void {
+    public removeCharacter (index: number): void {
 
       this.charactersList.splice(index, 1);
 
